@@ -1,0 +1,26 @@
+{
+  "name": "@iamadeveloper-es/vue3-validator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./validator": "./dist/validator/FormValidator.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build && vue-tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
