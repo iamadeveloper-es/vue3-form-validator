@@ -1,9 +1,68 @@
-# Vue 3 + TypeScript + Vite
+# vue3-form-validator
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Librería minmalísta para validaciones de formulario para Vue 3.
 
-## Recommended Setup
+## Configuaración del proyecto
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+### Instalar las dependecias:
+```sh
+npm install @iamadeveloper-es/vue3-form-validator
+```
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+### main.js en la parte superior del archivo importamos el plugin:
+```js
+import { formValidator } from '@iamadeveloper-es/vue3-form-validator'
+```
+
+### main.js Le decimos a Vue que use nuestro plugin:
+```js
+app.use(formValidator, {})
+```
+
+### main.js Configuració del plugin:
+* Validaciones Custom
+```js
+import { customValidations } from './validations/custom-validations'
+app.use(formValidator, {
+    customRules: customValidations
+})
+```
+
+### Uso en vista o componente:
+1. Importamos el composable 'useValidator'
+2. Traemos la función 'validateForm' del composable
+3. asignamos un 'ref' a nuestro formulario
+4. Añadimos las validaciones a los inputs con el atributo 'validations'
+5. Creamos un span para mostrar los errores con el atributo 'data-error' y el mismo valor del name del input
+6. Cuando queramos validar el formulario, llamamos a la función 'validateForm' del composable pasándole la ref del formulario
+```js
+import { useValidator } from '@iamadeveloper-es/vue3-form-validator';
+
+const { validateForm } = useValidator()
+const form = ref(null)
+const formData = ref({
+  userName: ''
+})
+
+const onSubmit = () => {
+  validateForm(form)
+}
+</script>
+
+<template>
+  <form 
+  ref="form"
+  @submit.prevent="onSubmit">
+    <label for="userName">User name</label>
+    <input 
+    type="text"
+    id="userName"
+    name="userName"
+    v-model="formData.userName"
+    validations="required">
+    <span data-error="userName"></span>
+
+    <button type="submit">Send</button>
+  </form>
+</template>
+```

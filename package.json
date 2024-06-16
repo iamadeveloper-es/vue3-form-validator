@@ -1,7 +1,7 @@
 {
-  "name": "@iamadeveloper-es/vue3-validator",
+  "name": "@iamadeveloper-es/vue3-form-validator",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "files": ["dist"],
   "module": "./dist/index.js",

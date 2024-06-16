@@ -11,7 +11,7 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "Vue3FormValidator",
       // the name of the output files when the build is run
-      fileName: "vue3-validator",
+      fileName: "vue3-form-validator",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
