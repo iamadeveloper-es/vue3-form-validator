@@ -23,9 +23,8 @@
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": [
-    "src/App.vue", 
-    "src/main.ts", 
-    "src/assets", 
+    "src/App.vue",
+    "src/main.ts",
     "src/locales/**",
     "src/views/**",
     "src/validations/**",
