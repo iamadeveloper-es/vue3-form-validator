@@ -10,7 +10,7 @@
     "./validator": "./dist/validator/FormValidator.js"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite && build",
     "build": "vue-tsc && vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview"
   },
