@@ -1,0 +1,9 @@
+{
+    "message": "hello en",
+    "validations": {
+        "custom":{
+            "required": "El campo es requerido",
+            "between": "El valor {0} debe estar entre {1} y {2}"
+        }
+    }
+}

@@ -1,3 +1,6 @@
+/**
+ * Exportar
+ */
 export const validations = {
 
   'required': (value: unknown,) => {

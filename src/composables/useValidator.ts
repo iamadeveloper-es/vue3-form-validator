@@ -1,3 +1,6 @@
+/**
+ * Exportar
+ */
 import { ref, reactive, computed, getCurrentInstance, onUnmounted } from 'vue';
 // import {validations} from '../validator/validations'
 import FormValidator from '../validator/FormValidator';

@@ -1,3 +1,6 @@
+/**
+ * Exportar
+ */
 import {validations} from './validations';
 
 // const options = {
