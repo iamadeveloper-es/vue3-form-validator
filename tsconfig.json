@@ -22,5 +22,13 @@
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["src/App.vue", "src/main.ts"]
+  "exclude": [
+    "src/App.vue", 
+    "src/main.ts", 
+    "src/assets", 
+    "src/locales/**",
+    "src/views/**",
+    "src/validations/**",
+    "src/router/**"
+  ]
 }
